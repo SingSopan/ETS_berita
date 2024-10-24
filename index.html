@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Berita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="page-title">Daftar Berita</h1>
+    </header>
+
+    <main>
+        <!-- Daftar Berita -->
+        <section id="news-list" class="news-list">
+            <article class="news-item">
+                <h2><a href="?id=1">Berita 1: 2019</a></h2>
+                <p>TETAP JAGA KESEHATAN</p>
+            </article>
+
+            <article class="news-item">
+                <h2><a href="?id=2">Berita 2: MEWING</a></h2>
+                <p>SIGMA MAN</p>
+            </article>
+
+            <article class="news-item">
+                <h2><a href="?id=3">Berita 3: WOW</a></h2>
+                <p>WAGILAH</p>
+            </article>
+
+            <article class="news-item">
+                <h2><a href="?id=4">Berita 4: TIDAK TAHU</a></h2>
+                <p>TETAP HIDUP</p>
+            </article>
+
+            <article class="news-item">
+                <h2><a href="?id=5">Berita 5: SIKIBIDI</a></h2>
+                <p>GYAT SIGMA MAN</p>
+            </article>
+        </section>
+
+        <!-- Detail Berita -->
+        <section id="news-detail" class="news-detail" style="display: none;">
+            <article id="news-content"></article>
+            <button onclick="goBack()">Kembali ke Daftar Berita</button>
+        </section>
+    </main>
+
+    <script>
+        // Fungsi untuk kembali ke daftar berita
+        function goBack() {
+            window.location.href = window.location.pathname;
+        }
+
+        // Fungsi untuk mendapatkan parameter query string dari URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Data berita dengan gambar lokal
+        const newsData = {
+            1: {
+                title: "2019",
+                date: "23 Oktober 2024",
+                image: "BG-ITS.png",
+                content: "Bahwa sesungguhnya kemerdekaan itu ialah hak segala bangsa dan oleh sebab itu, maka penjajahan di atas dunia harus dihapuskan, karena tidak sesuai dengan peri-kemanusiaan dan peri-keadilan. Dan perjuangan pergerakan kemerdekaan Indonesia telah sampailah kepada saat yang membahagiakan dengan selamat sentausa mengantarkan rakyat Indonesia ke depan pintu gerbang kemerdekaan Negara Indonesia yang merdeka, bersatu, berdaulat, adil dan makmur. Atas berkat rakhmat Allah yang maha kuasa dan dengan didorongkan oleh keinginan luhur supaya berkehidupan kebangsaan yang bebas, maka rakyat Indonesai menyatakan dengan ini kemerdekaannya.Kemudian dari pada itu untuk membentuk suatu Pemerintah Negara Indonesia yang melindungi segenap bangsa Indonesia dan seluruh tumpah darah Indonesia dan untuk memajukan kesejahteraan umum, mencerdaskan kehidupan bangsa dan ikut melaksanakan ketertiban dunia yang berdasarkan kemerdekaan, perdamaian abadi dan keadilan sosial, maka disusunlah Kemerdekaan Kebangsaan Indonesia itu dalam suatu susunan Negara Republik Indonesia, yang berkedaulatan rakyat dengan berdasar kepada: Ketuhanan Yang Maha Esa, Kemanusiaan yang adil dan beradab, persatuan Indonesia dan kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan/perwakilan, serta dengan mewujudkan suatu keadilan sosial bagi seluruh rakyat Indonesia."
+            },
+            2: {
+                title: "MEWING",
+                date: "22 Oktober 2024",
+                image: "BG-ITS.png",
+                content: "Ini adalah konten lengkap untuk berita kedua. Berita ini membahas perkembangan terkini dalam industri teknologi, termasuk inovasi-inovasi yang akan datang dan pengaruhnya terhadap masyarakat."
+            },
+            3: {
+                title: "WOW",
+                date: "21 Oktober 2024",
+                image: "BG-ITS.png",
+                content: "Bahwa sesungguhnya kemerdekaan itu ialah hak segala bangsa dan oleh sebab itu, maka penjajahan di atas dunia harus dihapuskan, karena tidak sesuai dengan peri-kemanusiaan dan peri-keadilan. Dan perjuangan pergerakan kemerdekaan Indonesia telah sampailah kepada saat yang membahagiakan dengan selamat sentausa mengantarkan rakyat Indonesia ke depan pintu gerbang kemerdekaan Negara Indonesia yang merdeka, bersatu, berdaulat, adil dan makmur. Atas berkat rakhmat Allah yang maha kuasa dan dengan didorongkan oleh keinginan luhur supaya berkehidupan kebangsaan yang bebas, maka rakyat Indonesai menyatakan dengan ini kemerdekaannya.Kemudian dari pada itu untuk membentuk suatu Pemerintah Negara Indonesia yang melindungi segenap bangsa Indonesia dan seluruh tumpah darah Indonesia dan untuk memajukan kesejahteraan umum, mencerdaskan kehidupan bangsa dan ikut melaksanakan ketertiban dunia yang berdasarkan kemerdekaan, perdamaian abadi dan keadilan sosial, maka disusunlah Kemerdekaan Kebangsaan Indonesia itu dalam suatu susunan Negara Republik Indonesia, yang berkedaulatan rakyat dengan berdasar kepada: Ketuhanan Yang Maha Esa, Kemanusiaan yang adil dan beradab, persatuan Indonesia dan kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan/perwakilan, serta dengan mewujudkan suatu keadilan sosial bagi seluruh rakyat Indonesia."
+            },
+            4: {
+                title: "TIDAK TAHU",
+                date: "20 Oktober 2024",
+                image: "BG-ITS.png",
+                content: "Bahwa sesungguhnya kemerdekaan itu ialah hak segala bangsa dan oleh sebab itu, maka penjajahan di atas dunia harus dihapuskan, karena tidak sesuai dengan peri-kemanusiaan dan peri-keadilan. Dan perjuangan pergerakan kemerdekaan Indonesia telah sampailah kepada saat yang membahagiakan dengan selamat sentausa mengantarkan rakyat Indonesia ke depan pintu gerbang kemerdekaan Negara Indonesia yang merdeka, bersatu, berdaulat, adil dan makmur. Atas berkat rakhmat Allah yang maha kuasa dan dengan didorongkan oleh keinginan luhur supaya berkehidupan kebangsaan yang bebas, maka rakyat Indonesai menyatakan dengan ini kemerdekaannya.Kemudian dari pada itu untuk membentuk suatu Pemerintah Negara Indonesia yang melindungi segenap bangsa Indonesia dan seluruh tumpah darah Indonesia dan untuk memajukan kesejahteraan umum, mencerdaskan kehidupan bangsa dan ikut melaksanakan ketertiban dunia yang berdasarkan kemerdekaan, perdamaian abadi dan keadilan sosial, maka disusunlah Kemerdekaan Kebangsaan Indonesia itu dalam suatu susunan Negara Republik Indonesia, yang berkedaulatan rakyat dengan berdasar kepada: Ketuhanan Yang Maha Esa, Kemanusiaan yang adil dan beradab, persatuan Indonesia dan kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan/perwakilan, serta dengan mewujudkan suatu keadilan sosial bagi seluruh rakyat Indonesia."
+            },
+            5: {
+                title: "Berita SKIBIDI",
+                date: "19 Oktober 2024",
+                image: "image.png",
+                content: "Skibidi Toilet adalah seri web machinima dari serangkai seri video YouTube dan YouTube Shorts viral yang diunggah di kanal DaFuq!?Boom!. Serial ini menggambarkan perang antara Skibidi Toilet — kepala tanpa tubuh di dalam toilet bergerak yang dapat dibunuh jika disiram — dan faksi orang-orang yang memiliki perangkat keras di kepalanya, seperti kamera (Cameraman), pengeras suara (Speakerman), atau televisi (TV Man). Skibidi Toilet diproduksi oleh animator Georgia yang bernama Alexey Gerasimov menggunakan Source Filmmaker Skibidi Toilet menampilkan visual aneh dengan sifat tidak masuk akal dan durasi tayang yang relatif singkat, dan menjadi viral beberapa bulan setelah debutnya. Video short pertama diposting pada Februari 2023. Video tersebut dengan cepat mengumpulkan jutaan penayangan dan menjadi meme di YouTube dan TikTok. Menurut Tubefilter, DaFuq!?Boom! adalah kanal YouTube yang paling banyak dilihat selama Juni 2023.[1]"
+            }
+        };
+
+        // Menampilkan detail berita jika ada ID berita dalam URL
+        const newsId = getQueryParam('id');
+        if (newsId && newsData[newsId]) {
+            document.getElementById('page-title').textContent = newsData[newsId].title;
+            document.getElementById('news-list').style.display = 'none';
+            document.getElementById('news-detail').style.display = 'block';
+
+            // Isi konten berita berdasarkan ID
+            const newsContent = `
+                <h2>${newsData[newsId].title}</h2>
+                <img src="${newsData[newsId].image}" alt="${newsData[newsId].title}" class="news-image">
+                <p class="publish-date">Diterbitkan pada: ${newsData[newsId].date}</p>
+                <p>${newsData[newsId].content}</p>
+            `;
+            document.getElementById('news-content').innerHTML = newsContent;
+        }
+    </script>
+</body>
+</html>
